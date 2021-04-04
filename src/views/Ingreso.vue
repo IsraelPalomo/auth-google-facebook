@@ -75,6 +75,7 @@ export default {
 					.set(usuario);
 				console.log("Usuario Guardado en DB");
 				router.push({ path: "/" });
+				window.location.reload();
 			} catch (error) {
 				console.log(error);
 			}

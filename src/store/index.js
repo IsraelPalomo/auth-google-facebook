@@ -22,8 +22,10 @@ export default new Vuex.Store({
 				uid: user.uid,
 				foto: user.photoURL,
 			};
+
 			commit("setUsuario", usuario);
 		},
+
 		cerrarSesion({ commit }) {
 			auth
 				.signOut()
