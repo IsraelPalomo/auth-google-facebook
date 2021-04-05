@@ -7,11 +7,16 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		usuario: {},
+		usuario: "",
 	},
 	mutations: {
 		setUsuario(state, payload) {
 			state.usuario = payload;
+			if (payload === null) {
+				state.usuario = "";
+			} else {
+				state.usuario = payload;
+			}
 		},
 	},
 	actions: {
